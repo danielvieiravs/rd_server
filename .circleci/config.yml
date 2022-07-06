@@ -9,8 +9,11 @@ jobs:
       - image: cimg/python:3.10.2
     steps:
       - checkout
-      - python/install-packages:
-          pkg-manager: pip
+      - run:
+          name: Install python dependencies
+          command: |
+            pip install pip-tools
+            pip install -r requirements_dev.txt
       - run:
           name: Run check deploy
           command: python manage.py check --deploy
