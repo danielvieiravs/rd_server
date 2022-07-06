@@ -16,10 +16,10 @@ jobs:
             pip install -r server/requirements.txt
       - run:
           name: Run check deploy
-          command: python manage.py check --deploy
+          command: python server/manage.py check --deploy
       - run:
           name: Run tests
-          command: python manage.py test
+          command: python server/manage.py test
 
 workflows:
   Build And Test:
