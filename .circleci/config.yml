@@ -19,6 +19,6 @@ jobs:
           command: python manage.py test
 
 workflows:
-  sample:
+  Build And Test:
     jobs:
       - build-and-test
