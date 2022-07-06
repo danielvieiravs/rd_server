@@ -5,11 +5,11 @@ orbs:
 
 jobs:
   build-and-test:
+    working_directory: server/
     docker:
       - image: cimg/python:3.10.2
     steps:
-      - checkout:
-        path: server/
+      - checkout
       - run:
           name: Install python dependencies
           command: |
