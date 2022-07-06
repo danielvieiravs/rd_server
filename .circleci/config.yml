@@ -13,7 +13,7 @@ jobs:
           name: Install python dependencies
           command: |
             pip install pip-tools
-            pip install -r requirements_dev.txt
+            pip install -r requirements.txt
       - run:
           name: Run check deploy
           command: python manage.py check --deploy
