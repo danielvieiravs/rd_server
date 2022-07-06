@@ -110,3 +110,8 @@ $ docker exec -i -t -u 0 rd_server_web_1 /bin/sh
 ```shell
 $ docker-compose exec <service> <command>
 ```
+
+## Run migrations
+```shell
+$ docker-compose exec web python manage.py migrate --noinput
+```

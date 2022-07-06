@@ -4,6 +4,9 @@ exclude: >
         requirements_dev.txt|
     )$
 
+default_language_version:
+    python: python3.10.0
+
 repos:
 -   repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v2.3.0
