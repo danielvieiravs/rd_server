@@ -13,7 +13,6 @@ jobs:
           POSTGRESQL_USER: server
           POSTGRESQL_PASSWORD: vendlive
       - image: circleci/postgres:13.0-alpine
-        hostname: db
         environment:
           POSTGRES_USER: server
           POSTGRES_PASSWORD: server
