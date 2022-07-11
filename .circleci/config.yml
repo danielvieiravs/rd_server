@@ -8,16 +8,16 @@ jobs:
     docker:
       - image: cimg/python:3.10.0
         environment:
-          POSTGRESQL_HOST: localhost
-          POSTGRESQL_USER: server
-          POSTGRESQL_PASSWORD: server
-          POSTGRESQL_PORT: 5432
-          POSTGRESQL_DB: server
+          POSTGRES_HOST: localhost
+          POSTGRES_USER: server
+          POSTGRES_PASSWORD: server
+          POSTGRES_PORT: 5432
+          POSTGRES_DB: server
       - image: circleci/postgres:13.0
         environment:
-          POSTGRESQL_USER: server
-          POSTGRESQL_PASSWORD: server
-          POSTGRESQL_DB: server
+          POSTGRES_USER: server
+          POSTGRES_PASSWORD: server
+          POSTGRES_DB: server
     steps:
       - checkout
       - run:

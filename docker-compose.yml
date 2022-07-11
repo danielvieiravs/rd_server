@@ -13,11 +13,11 @@ services:
   postgres-test:
     image: postgres:13.0-alpine
     volumes:
-      - postgres_data:/var/lib/postgresql/data/
+      - postgres_data:/var/lib/POSTGRES/data/
     environment:
-      - POSTGRESQL_USER=server
-      - POSTGRESQL_PASSWORD=server
-      - POSTGRESQL_DB=server
+      - §x_USER=server
+      - POSTGRES_PASSWORD=server
+      - POSTGRES_DB=server
 
 volumes:
   postgres_data:
