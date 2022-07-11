@@ -12,6 +12,7 @@ jobs:
           POSTGRESQL_DB: server
           POSTGRESQL_USER: server
           POSTGRESQL_PASSWORD: server
+          POSTGRESQL_PORT: 5432
       - image: circleci/postgres:13.0
         environment:
           POSTGRES_USER: server
