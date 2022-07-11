@@ -6,13 +6,13 @@ orbs:
 jobs:
   build-and-test:
     docker:
-      - image: cimg/python:3.10.0-alpine
+      - image: cimg/python:3.10.0
         environment:
           POSTGRESQL_HOST: localhost
           POSTGRESQL_DB: server
           POSTGRESQL_USER: server
           POSTGRESQL_PASSWORD: vendlive
-      - image: circleci/postgres:13.0-alpine
+      - image: circleci/postgres:13.0
         environment:
           POSTGRES_USER: server
           POSTGRES_PASSWORD: server
