@@ -4,20 +4,20 @@ orbs:
   python: circleci/python@1.5.0
 
 jobs:
-  build-and-test:
+  build:
     docker:
       - image: cimg/python:3.10.0
         environment:
           POSTGRESQL_HOST: localhost
-          POSTGRESQL_DB: server
           POSTGRESQL_USER: server
           POSTGRESQL_PASSWORD: server
           POSTGRESQL_PORT: 5432
+          POSTGRESQL_DB: server
       - image: circleci/postgres:13.0
         environment:
-          POSTGRES_USER: server
-          POSTGRES_PASSWORD: server
-          POSTGRES_DB: server
+          POSTGRESQL_USER: server
+          POSTGRESQL_PASSWORD: server
+          POSTGRESQL_DB: server
     steps:
       - checkout
       - run:
@@ -31,8 +31,3 @@ jobs:
       - run:
           name: Run tests
           command: python server/manage.py test --settings=server.settings.test
-
-workflows:
-  Build And Test:
-    jobs:
-      - build-and-test

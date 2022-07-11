@@ -69,9 +69,9 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": os.environ.get("POSTGRES_DB"),
-        "USER": os.environ.get("POSTGRES_USER"),
-        "PASSWORD": os.environ.get("POSTGRES_PASSWORD"),
+        "NAME": os.environ.get("POSTGRESQL_DB"),
+        "USER": os.environ.get("POSTGRESQL_USER"),
+        "PASSWORD": os.environ.get("POSTGRESQL_PASSWORD"),
         "HOST": os.environ.get("POSTGRESQL_HOST"),
         "PORT": os.environ.get("POSTGRESQL_PORT"),
     }
