@@ -1,7 +1,7 @@
 version: '3.8'
 
 services:
-  web:
+  server-test:
     build: ./server
     command: python manage.py runserver 0.0.0.0:8000 --settings=server.settings.dev
     volumes:
@@ -10,7 +10,7 @@ services:
       - 8000:8000
     env_file:
       - ./.env.dev
-  db:
+  postgres-test:
     image: postgres:13.0-alpine
     volumes:
       - postgres_data:/var/lib/postgresql/data/

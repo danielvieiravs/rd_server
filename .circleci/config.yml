@@ -11,7 +11,7 @@ jobs:
           POSTGRESQL_HOST: localhost
           POSTGRESQL_DB: server
           POSTGRESQL_USER: server
-          POSTGRESQL_PASSWORD: vendlive
+          POSTGRESQL_PASSWORD: server
       - image: circleci/postgres:13.0
         environment:
           POSTGRES_USER: server
