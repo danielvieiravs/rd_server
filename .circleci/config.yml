@@ -1,0 +1,33 @@
+version: 2.1
+
+orbs:
+  python: circleci/python@1.5.0
+
+jobs:
+  build:
+    docker:
+      - image: cimg/python:3.10.0
+        environment:
+          POSTGRES_HOST: localhost
+          POSTGRES_USER: server
+          POSTGRES_PASSWORD: server
+          POSTGRES_PORT: 5432
+          POSTGRES_DB: server
+      - image: circleci/postgres:13.0
+        environment:
+          POSTGRES_USER: server
+          POSTGRES_PASSWORD: server
+          POSTGRES_DB: server
+    steps:
+      - checkout
+      - run:
+          name: Install python dependencies
+          command: |
+            pip install pip-tools
+            pip install -r server/requirements.txt
+      - run:
+          name: Run check deploy
+          command: python server/manage.py check --deploy --settings=server.settings.test
+      - run:
+          name: Run tests
+          command: python server/manage.py test --settings=server.settings.test

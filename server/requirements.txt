@@ -1,4 +1,5 @@
     # via -r requirements.in
+    # via -r requirements.in
     # via django
     # via django
 #
@@ -9,4 +10,5 @@
 #
 asgiref==3.5.2
 django==4.0.6
+psycopg2-binary==2.9.3
 sqlparse==0.4.2
