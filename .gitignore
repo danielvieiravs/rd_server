@@ -5,3 +5,5 @@ static/
 .env*
 
 *.sqlite3
+
+.python-version
