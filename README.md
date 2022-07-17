@@ -89,7 +89,7 @@ After every ".pre-commit-config.yaml" file change, or for the first time, do:
 $ pre-commit install
 ```
 
-# Docker
+# Docker Dev
 
 ## Build && Run
 ```shell
@@ -103,7 +103,7 @@ $ docker-compose -f down -v
 
 ## Access container
 ```shell
-$ docker exec -i -t -u 0 rd_server_web_1 /bin/sh
+$ docker exec -i -t -u 0 rd_server_server-test_1 /bin/sh
 ```
 
 ## Execute commands

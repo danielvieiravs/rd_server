@@ -1,7 +1,7 @@
 exclude: >
     (?x)^(
-        requirements.txt|
-        requirements_dev.txt|
+        server/requirements.txt|
+        server/requirements_dev.txt|
     )$
 
 default_language_version:
