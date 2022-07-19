@@ -1,0 +1,12 @@
+{% extends "drf-yasg/swagger-ui.html" %}
+
+{% block extra_styles %}
+    <style>
+        /* Do not display topbar */
+        .swagger-ui .scheme-container, .swagger-ui .topbar { display: none !important; }
+
+        /* Do not display http://localhost:8080/api/?format=openapi */
+        .main a { display: none !important; }
+
+    </style>
+{% endblock %}
