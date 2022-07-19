@@ -3,11 +3,11 @@ version: '3.8'
 services:
   server-test:
     build: ./server
-    command: python manage.py runserver 0.0.0.0:8000 --settings=server.settings.dev
+    command: python manage.py runserver 0.0.0.0:8080 --settings=server.settings.dev
     volumes:
       - ./server:/usr/src/server/
     ports:
-      - 8000:8000
+      - 8080:8080
     env_file:
       - ./.env.dev
   postgres-test:
