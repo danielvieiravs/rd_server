@@ -27,6 +27,8 @@ django==4.0.6
     #   -r requirements.in
     #   djangorestframework
     #   drf-yasg
+django-querycount==0.7.0
+    # via -r requirements_dev.in
 djangorestframework==3.13.1
     # via
     #   -r requirements.in
