@@ -7,3 +7,4 @@ static/
 *.sqlite3
 
 .python-version
+.vscode/settings.json
