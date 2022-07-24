@@ -3,3 +3,4 @@
 
 # Additional packages required for development only
 pip-tools
+django-querycount

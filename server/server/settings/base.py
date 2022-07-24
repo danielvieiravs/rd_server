@@ -14,9 +14,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'api',
     'rest_framework',
     'drf_yasg',
+    'api',
+    'users',
 ]
 
 MIDDLEWARE = [
@@ -97,3 +98,5 @@ SWAGGER_SETTINGS = {
         'drf_yasg.inspectors.StringDefaultFieldInspector',
     ],
 }
+
+AUTH_USER_MODEL = 'users.CustomUser'
